@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Mode Website</title>
+    <style>
+        /* ---------------- Reset & Body ---------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f1724, #1e293b);
+            color: #fff;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        /* ---------------- Header ---------------- */
+        header {
+            background: #1e293b;
+            padding: 20px;
+            box-shadow: 0 0 20px #00f0ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #00f0ff;
+            text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #00f0ff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff0055;
+            text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+        }
+
+        /* ---------------- Main ---------------- */
+        main {
+            padding: 40px 20px;
+        }
+
+        main h2 {
+            font-size: 32px;
+            color: #ff0055;
+            text-shadow: 0 0 10px #ff0055;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+        }
+
+        textarea {
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            resize: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00f0ff;
+            background: none;
+            border: 2px solid #00f0ff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            color: #ff0055;
+            border-color: #ff0055;
+            text-shadow: 0 0 10px #ff0055;
+            box-shadow: 0 0 20px #ff0055;
+        }
+
+        /* ---------------- 5-Star Badges ---------------- */
+        .badges {
+            margin: 20px 0;
+        }
+
+        .star {
+            font-size: 32px;
+            color: gold;
+            margin: 0 5px;
+            text-shadow: 0 0 5px gold, 0 0 10px gold;
+            animation: glow 1.5s infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px gold, 0 0 10px gold;
+            }
+
+            100% {
+                text-shadow: 0 0 20px gold, 0 0 40px gold;
+            }
+        }
+
+        footer {
+            background: #1e293b;
+            padding: 15px;
+            margin-top: 40px;
+            box-shadow: 0 -5px 20px #00f0ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>GOD MODE WEBSITE</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#notes">Notes</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to God Mode</h2>
+            <p>This area is for writing notes, drawing, and earning 5-star badges!</p>
+            <div class="badges">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+            <button id="clickMe">Click for Power!</button>
+            <p id="message"></p>
+        </section>
+
+        <section id="about">
+            <h2>About This Website</h2>
+            <p>This website is designed for notes, drawings, badges, and epic god-mode effects!</p>
+        </section>
+
+        <section id="notes">
+            <h2>Write Your Notes</h2>
+            <textarea placeholder="Type your notes here..." rows="10"></textarea>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: example@example.com</p>
+            <textarea placeholder="Write your message..." rows="5"></textarea>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 God Mode Website</p>
+    </footer>
+
+    <script>
+        // ---------------- JS for Interactive Button ----------------
+        const btn = document.getElementById('clickMe');
+        const msg = document.getElementById('message');
+
+        btn.addEventListener('click', () => {
+            msg.textContent = "⚡ You activated GOD POWER! ⚡";
+            msg.style.color = "#ff0055";
+            msg.style.fontWeight = "bold";
+            msg.style.fontSize = "24px";
+            msg.style.textShadow = "0 0 10px #ff0055, 0 0 20px #ff0055";
+        });
+    </script>
+
+</body>
+
+</html>
